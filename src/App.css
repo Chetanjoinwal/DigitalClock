@@ -1,38 +1,88 @@
-.App {
+body, html {
+  font-family: "LED";
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.digiCl {
+  background: #222;
+  border-radius: 2rem;
+  padding: 2rem;
+  border: 0.2rem solid #444;
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 20px rgba(199, 199, 199, 0.8);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.week {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.week div {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+.week .active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+.time {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-family: "LED";
+}
+.time div {
+  font-size: 6rem;
+  margin: 0 0.2rem;
+        width: 109px;
+  transition: all 0.3s ease-in-out;
+}
+.time .dot {
+  color: #f5a623;
+  font-size: 6rem;
+        width: 20px;
+}
+.time .invisible {
+  opacity: 0;
+}
+.footer {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #666;
+}
+.alarm {
+  margin-top: 2rem;
+  text-align: center;
+}
+.alarm input, .alarm button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.alarm input {
+  width: 120px;
+  text-align: center;
+}
+.alarm button {
+  background-color: #444;
   color: white;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alarm button:hover {
+  background-color: #666;
 }
